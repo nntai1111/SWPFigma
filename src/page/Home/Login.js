@@ -69,7 +69,7 @@ export default function LoginToStore() {
 
     <div className={clsx(style.login_container)}>
       {localStorage.clear()}
-      <div className={clsx(style.title_login)}>Log inn</div>
+      <div className={clsx(style.title_login)}>Log in</div>
       <input
         type='text'
         placeholder='Username...'
