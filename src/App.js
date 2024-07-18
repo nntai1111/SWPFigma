@@ -75,8 +75,8 @@ function App() {
 
         <Routes>
           {/* home */}
-          <Route path={path.HOME} element={<Login />} />
-          <Route path={path.LOGIN} element={<Login />} />
+          {/* <Route path={path.HOME} element={<Login />} />
+          <Route path={path.LOGIN} element={<Login />} /> */}
           {/* admin */}
           <Route path={path.ADMIN} element={<Admin />} >
             <Route path={path.ADMIN} element={<Dashboard />} />
@@ -107,9 +107,9 @@ function App() {
             <Route path={path.RETURNPOLICY} element={<ReturnPolicy />} />
           </Route >
           {/* manager */}
-          <Route path={path.MANAGER} element={<Manager />}>
+          <Route path={path.HOME} element={<Manager />}>
             {/* <Route path={path.PRODUCTMANAGER} element={<ProductManager />} ></Route> */}
-            <Route path={path.MANAGER} element={<Dashboard />} />
+            <Route path={path.HOME} element={<Dashboard />} />
             <Route path={path.DIAMONDPRICE} element={<DiamondPrice />} />
             <Route path={path.PRICE} element={<Price />} />
             <Route path={path.MATERIAL} element={<Material />} />

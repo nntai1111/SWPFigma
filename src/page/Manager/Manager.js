@@ -6,13 +6,7 @@ import DiamondManager from './Product/DiamondManager';
 export default function Manager() {
     const navigate = useNavigate();
 
-    useEffect(() => {
-        const Authorization = localStorage.getItem('token');
-        const role = localStorage.getItem('role');
-        if (!Authorization || role !== 'manager') {
-            navigate('/login');
-        }
-    }, [navigate]);
+
 
     return (
         <>
