@@ -243,7 +243,7 @@ const DiamondManager = () => {
             }
 
             // Example of passing data through URL query parameters
-            navigate(`/manager/createProduct`);
+            navigate(`/createProduct`);
         } catch (error) {
             console.error('Error handling detail click:', error);
         }

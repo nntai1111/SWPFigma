@@ -80,7 +80,7 @@ const SpecialDiscountRequest = () => {
             }
 
             // Example of passing data through URL query parameters
-            navigate(`/manager/detailSpecialRequest?id=${sellOrderId}&phone=${customerPhone}`);
+            navigate(`/detailSpecialRequest?id=${sellOrderId}&phone=${customerPhone}`);
         } catch (error) {
             console.error('Error handling detail click:', error);
         }
