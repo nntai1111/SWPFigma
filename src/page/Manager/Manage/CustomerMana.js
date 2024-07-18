@@ -52,7 +52,7 @@ const CustomerMana = () => {
             }
 
             // Example of passing data through URL query parameters
-            navigate(`/manager/detailCustomer?phone=${customerPhone}`);
+            navigate(`/detailCustomer?phone=${customerPhone}`);
         } catch (error) {
             console.error('Error handling detail click:', error);
         }

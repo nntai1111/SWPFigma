@@ -190,7 +190,7 @@ const EmployeeMana = () => {
             endDateString = formattedEndDate.toISOString().slice(0, 19);;
             // console.log("endDateString (ISO 8601):", endDateString);
         }
-        navigate(`/manager/detailStaff?Id=${id}&startDate=${startDateString}&endDate=${endDateString}`);
+        navigate(`/detailStaff?Id=${id}&startDate=${startDateString}&endDate=${endDateString}`);
 
     };
     return (

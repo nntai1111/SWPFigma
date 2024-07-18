@@ -59,10 +59,14 @@ import Payment from './page/Manager/Report/Payment';
 import CustomerDetail from './page/Manager/Manage/CustomerDetail';
 import PaymentReturn from './page/Cashier/PaymentReturn';
 import CreateProduct from './page/Manager/Product/CreateProduct';
+
+import ScreenGold from './page/Seller/ScreenGold';
+
 import SellOrder from './page/Manager/Report/SellOrder';
 import BuyOrder from './page/Manager/Report/BuyOrder';
 import DiamondPrice from './page/Manager/Material/DiamondPrice';
 import StaffDetail from './page/Manager/Manage/StaffDetail';
+
 function App() {
   // test redux có hoạt động không
   // const {test,homeData} = useSelector(state => state.app)
@@ -86,7 +90,7 @@ function App() {
             <Route path={path.SELLORDER} element={<SellOrder />} />
             <Route path={path.BUYORDER} element={<BuyOrder />} />
             <Route path={path.PAYMENT} element={<Payment />} />
-            <Route path={path.EMPLOYEE} element={<EmployeeMana />} />
+            <Route path={path.EMPLOYEE} element={<Employee />} />
             <Route path={path.STALL} element={<Stall />} />
 
 
@@ -141,8 +145,8 @@ function App() {
             <Route path={path.SPECIALDISCOUNT} element={<SpecialDiscountRequest />} />
             <Route path={path.RETURNPOLICY} element={<ReturnPolicyView />} />
             <Route path="detailSpecialRequest" element={<DetailPage />} />
-            <Route path="customerMana/detailCustomer" element={<CustomerDetail />} />
-            <Route path="Employee/detailStaff" element={<StaffDetail />} />
+            <Route path="detailCustomer" element={<CustomerDetail />} />
+            <Route path="detailStaff" element={<StaffDetail />} />
           </Route>
           {/* Seller */}
           <Route path={path.PUBLIC} element={<Public />}>
@@ -160,7 +164,7 @@ function App() {
               <Route path={path.ONPROCESS} element={<OnprocessSeller />} />
               <Route path={path.COMPLETED} element={<CompleteSeller />} />
             </Route>
-            <Route path={path.PROMOTION} element={<Promotion />} />
+            <Route path={path.SCREENGOLD} element={<ScreenGold />} />
             <Route path={path.RETURN_EX} element={<Return_Ex />} >
               <Route path={path.BUY} element={<Buy />} />
               <Route path={path.BUYOUT} element={<BuyOut />} />
@@ -183,6 +187,7 @@ function App() {
           </Route>
           <Route path='cs_bill/:id' element={<Cs_Bill />} />
           <Route path='bill/:id' element={<Bill />} />
+
         </Routes>
       </div>
 
