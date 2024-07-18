@@ -6,14 +6,26 @@ import DiamondManager from './Product/DiamondManager';
 export default function Manager() {
     const navigate = useNavigate();
 
+    // useEffect(() => {
+    //     const Authorization = localStorage.getItem('token');
+    //     const role = localStorage.getItem('role');
+    //     if (!Authorization || role !== 'manager') {
+    //         navigate('/login');
+    //     }
+    // }, [navigate]);
     useEffect(() => {
-        const Authorization = localStorage.getItem('token');
-        const role = localStorage.getItem('role');
-        if (!Authorization || role !== 'manager') {
-            navigate('/login');
-        }
-    }, [navigate]);
+        const user = {
+            token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6Im1hbmFnZXJfdXNlcjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJtYW5hZ2VyIiwiZXhwIjoxNzIxMzMwOTU1LCJpc3MiOiJodHRwczovL2pzc2F0c3Byb2plY3QuYXp1cmV3ZWJzaXRlcy5uZXQvIiwiYXVkIjoiaHR0cHM6Ly9qc3NhdHNwcm9qZWN0LmF6dXJld2Vic2l0ZXMubmV0LyJ9.8qCpt5QIiJY9tuXSBkntppUuIuMg2pOeyVikjKgRq7E',
+            role: 'manager',
+            staffId: 2,
+            name: '	Jane Smith'
+        };
 
+        localStorage.setItem('token', user.token);
+        localStorage.setItem('role', user.role);
+        localStorage.setItem('staffId', user.staffId);
+        localStorage.setItem('name', user.name);
+    }, []);
     return (
         <>
             <div className='w-full flex h-[100vh] bg-gray-100'>
