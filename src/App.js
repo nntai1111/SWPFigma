@@ -59,10 +59,14 @@ import Payment from './page/Manager/Report/Payment';
 import CustomerDetail from './page/Manager/Manage/CustomerDetail';
 import PaymentReturn from './page/Cashier/PaymentReturn';
 import CreateProduct from './page/Manager/Product/CreateProduct';
+
+import ScreenGold from './page/Seller/ScreenGold';
+
 import SellOrder from './page/Manager/Report/SellOrder';
 import BuyOrder from './page/Manager/Report/BuyOrder';
 import DiamondPrice from './page/Manager/Material/DiamondPrice';
 import StaffDetail from './page/Manager/Manage/StaffDetail';
+
 function App() {
   // test redux có hoạt động không
   // const {test,homeData} = useSelector(state => state.app)
@@ -75,8 +79,8 @@ function App() {
 
         <Routes>
           {/* home */}
-          {/* <Route path={path.HOME} element={<Login />} />
-          <Route path={path.LOGIN} element={<Login />} /> */}
+          <Route path={path.HOME} element={<Login />} />
+          <Route path={path.LOGIN} element={<Login />} />
           {/* admin */}
           <Route path={path.ADMIN} element={<Admin />} >
             <Route path={path.ADMIN} element={<Dashboard />} />
@@ -86,7 +90,7 @@ function App() {
             <Route path={path.SELLORDER} element={<SellOrder />} />
             <Route path={path.BUYORDER} element={<BuyOrder />} />
             <Route path={path.PAYMENT} element={<Payment />} />
-            <Route path={path.EMPLOYEE} element={<EmployeeMana />} />
+            <Route path={path.EMPLOYEE} element={<Employee />} />
             <Route path={path.STALL} element={<Stall />} />
 
 
@@ -107,9 +111,9 @@ function App() {
             <Route path={path.RETURNPOLICY} element={<ReturnPolicy />} />
           </Route >
           {/* manager */}
-          <Route path={path.HOME} element={<Manager />}>
+          <Route path={path.MANAGER} element={<Manager />}>
             {/* <Route path={path.PRODUCTMANAGER} element={<ProductManager />} ></Route> */}
-            <Route path={path.HOME} element={<Dashboard />} />
+            <Route path={path.MANAGER} element={<Dashboard />} />
             <Route path={path.DIAMONDPRICE} element={<DiamondPrice />} />
             <Route path={path.PRICE} element={<Price />} />
             <Route path={path.MATERIAL} element={<Material />} />
@@ -160,7 +164,7 @@ function App() {
               <Route path={path.ONPROCESS} element={<OnprocessSeller />} />
               <Route path={path.COMPLETED} element={<CompleteSeller />} />
             </Route>
-            <Route path={path.PROMOTION} element={<Promotion />} />
+            <Route path={path.SCREENGOLD} element={<ScreenGold/>} />
             <Route path={path.RETURN_EX} element={<Return_Ex />} >
               <Route path={path.BUY} element={<Buy />} />
               <Route path={path.BUYOUT} element={<BuyOut />} />
@@ -183,6 +187,7 @@ function App() {
           </Route>
           <Route path='cs_bill/:id' element={<Cs_Bill />} />
           <Route path='bill/:id' element={<Bill />} />
+       
         </Routes>
       </div>
 

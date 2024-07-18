@@ -24,7 +24,11 @@ const path = {
     BUY: 'buyIn',
     BUYOUT: 'buyOut',
     BILL: 'bill',
-    // Cashier
+
+    SCREENGOLD:'screengold',
+
+
+  
 
     CS_PUBLIC: 'cs_public',
     CS_ORDER: 'cs_order',

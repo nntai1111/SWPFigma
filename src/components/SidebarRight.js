@@ -77,12 +77,17 @@ const SidebarRight = () => {
     try {
       const res = await axios.post('https://jssatsproject.azurewebsites.net/api/SellOrder/CreateOrder', data);
       if (!isDraft) {
+        if (!specialDiscountRate === 0){
+          toast.error('Must be Temporary');
+          return;
+        }
         await axios.put(`https://jssatsproject.azurewebsites.net/api/SellOrder/UpdateStatus?id=${res.data.id}`, {
           status: 'waiting for customer payment',
           createDate: new Date().toISOString(),
         });
       }
-      if (res.status === 201 || res.status === 200) {        
+      if (res.status === 201 || res.status === 200) {  
+        console.log('sp',res.data)      
         dispatch(deleteCustomer());
         dispatch(deleteProductAll());
         setDescription('');
@@ -562,7 +567,7 @@ const SidebarRight = () => {
 
 
     <div className='flex justify-center '>
-      <div className='shadow-md shadow-gray-600 pt-[10px] rounded-2xl w-[90%] h-[34em] bg-[#f3f1ed] mt-[20px]'>
+      <div className='shadow-md shadow-gray-600 pt-[10px] rounded-2xl w-[90%] h-[34em] bg-[#ffffff] mt-[20px]'>
         <div className='flex justify-end'>
           <div className='flex justify-end px-[15px] text-black font-thin'>{currentTime}</div>
         </div>
